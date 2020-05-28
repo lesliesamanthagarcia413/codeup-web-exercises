@@ -2,27 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Veridian Dynamics Registration Page</title>
+    <title>Register With Us</title>
 </head>
     <p>
     <h1>Register With Us</h1>
     <form method="POST" action="https://request-inspector.glitch.me/">
         </p>
         <p>
-           <h4>Email</h4>
-        <input type="text" name="email" placeholder="Enter your email">
-
-          <h4>Password</h4>
-        <input type="password" name="password" placeholder="Enter your password">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Enter your email">
+            <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password">
 
         </p>
-        <p>
-            <label for="Bio"><h4>Bio</h4></label>
+        <section>
+            <label for="Bio">Bio</label><br>
             <textarea id="Bio" name="Bio" rows="10" cols="40"></textarea>
-        </p>
+        </section>
 
-        <p>
-            <h2>How did you hear about us?</h2>
+        <section>
+            <h3>How did you hear about us?</h3>
             <label for="billboard">
                 billboard <input id="billboard" type="checkbox" name="codeup" value="billboard">
             </label>
@@ -35,14 +34,17 @@
             <label for="other">
                 other <input id="other" type="checkbox" name="codeup" value="other">
             </label>
+        </section>
         <p>
-        <h2>What web browser are you using?</h2>
-        <select name="What web browser are you using?">
+        <section>
+            <label for="browser">What web browser are you using?</label>
+        <select name="browser" id="browser">
             <option value="Internet Explorer">Internet Explorer</option>
             <option value="FireFox">FireFox</option>
             <option value="Safari">Safari</option>
             <option value="Chrome">Chrome</option>
         </select>
+        </section>
         </p>
         <p>
             <button type="submit">Submit</button>
