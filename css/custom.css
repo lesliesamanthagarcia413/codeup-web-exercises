@@ -1,0 +1,11 @@
+.jumbotron-fluid {
+    display: flex;
+    float: bottom;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    background: white;
+    opacity: 60%;
+}
