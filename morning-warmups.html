@@ -10,9 +10,7 @@
         return number * 5
     }
     console.log(multiply(2))
-</script>
 
-<script>
     function Happybirthdaysong(name) {
         console.log("Happy birthday to you,");
         console.log("Happy birthday to you,");
@@ -33,16 +31,16 @@
     console.log(numberseven());
 
 
-    function lengthofstring(string) {
+    function lengthOfString(string) {
         return string.length;
     }
-    console.log(lengthofstring(codeup));
+    console.log(lengthOfString("Codeup"));
 
 
     function numberofcharactersinastring(string) {
-        return  lengthofstring(string)
+        return  lengthOfString(string)
     }
-    console.log(numberofcharactersinastring(codeup));
+    console.log(numberofcharactersinastring("codeup test"));
 
     function diameterofcirlce(radius) {
         return radius * 2;
@@ -54,11 +52,21 @@
     }
     console.log(squareRoot(100));
 
-    function returnargument(param) {
+    function returnArgument(param) {
         return param;
     }
-    console.log(returnargument("Testing this out"));
+    console.log(returnArgument("Testing this out"));
 
+    function typeOfInput(input) {
+        return typeof input;
+    }
+    console.log(typeOfInput(55));
+    typeOfInput("testing");
+
+    function isEven(number) {
+        return number % 2 === 0;
+    }
+    console.log(isEven(44));
 </script>
 
 </body>
