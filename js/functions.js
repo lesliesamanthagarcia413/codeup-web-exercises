@@ -8,7 +8,7 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name) {
+const sayHello =function (name) {
     return("Hello, " + name + "!");
 }
 console.log(sayHello("codeup"));
@@ -58,12 +58,8 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(number) {
-    if(number === 2) {
-        return true;
-    } else {
-     return false;
-    }
+const isTwo = function (number) {
+    return number === 2;
 }
 console.log(isTwo(random));
 /**
@@ -77,7 +73,7 @@ console.log(isTwo(random));
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(tipPercent, billTotal) {
+const calculateTip = function (tipPercent, billTotal) {
     return tipPercent * billTotal;
 }
 console.log(calculateTip(0.20,20));
@@ -87,15 +83,13 @@ console.log(calculateTip(0.20,20));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-function calculateTip(tipPercent, billSubTotal) {
-    return tipPercent * billSubTotal
-}
-//adding + in front of prompt converts the string to a number, but not an integer. parseInt returned Nan
-let billSubTotal = +prompt('How much is your bill?');
-let tipPercent = +prompt('How much would you like to tip?');
-let totalAmount = tipPercent * billSubTotal
-calculateTip()
-alert("Your total tip is $" + totalAmount);
+
+
+let billTotal = parseFloat(prompt('What is your bill total?'));
+let tipPercent = parseFloat(prompt('How much would you like to tip?'));
+alert("Suggested tip amount: $" + calculateTip(tipPercent, billTotal));
+
+
 
 /**
  * TODO:
@@ -111,3 +105,12 @@ alert("Your total tip is $" + totalAmount);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+const applyDiscount = function(originalPrice, discountPercent) {
+    return originalPrice - originalPrice * discountPercent;
+}
+
+var originalPrice = 100;
+var dicountPercent = .2; // 20%
+console.log(applyDiscount(originalPrice, dicountPercent)); // 80
+console.log(applyDiscount(45.99, 0.12)); // 40.4712
