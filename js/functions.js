@@ -87,7 +87,7 @@ console.log(calculateTip(0.20,20));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-function calculateTip (tipPercent, billSubTotal) {
+function calculateTip(tipPercent, billSubTotal) {
     return tipPercent * billSubTotal
 }
 //adding + in front of prompt converts the string to a number, but not an integer. parseInt returned Nan
