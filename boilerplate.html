@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var genres = ["Pop", "Jazz", "Indie"];
+    alert(genres);
+
+    var myArr = ["example", "mini", 5, [1,2,3]];
+    alert(myArr);
+    console.log(myArr.length);
+
+    var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+    var notice = 'The shape at index 1 is: ' + shapes[1] + "\n";
+    notice = notice + 'The shape at index 4 is: ' + shapes[4];
+    alert(notice);
+
+
+
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    for (var i = 0; i < fruits.length; i++) {
+        console.log("The fruit at index " + i + " is " + fruits[i] + ".");
+    }
+
+    shapes.forEach(function(shape, index) {
+        console.log('the shape at index ' + index + ' is ' + shape + '.');
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>
