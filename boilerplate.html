@@ -29,9 +29,41 @@
         console.log('the shape at index ' + index + ' is ' + shape + '.');
     });
 
+    let week = ["Monday", "Tuesday", "Wednesday", "Thursday","Friday"];
+    console.log("The week array length is : " + week.length);
+    console.log(week);
+    week.unshift("Sunday");
+    console.log(week);
+    week.push("Saturday");
+    console.log(week);
+    week.forEach(function(week) {
+        console.log('\t', week);
+    })
+    console.log("The new week array length is : " + week.length);
 
 
+    let list = ["red", "blue", "green", "yellow", "pink"]
+    console.log(list);
+    let last = list.pop();
+    console.log(list.length);
+    console.log(last);
+    let first = list.shift();
+    console.log(first);
+    console.log(list.length);
 
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'red'];
+    console.log(colors.indexOf("indigo"));
+
+
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let slice1 = fruits.slice(1,3);
+    console.log(slice1);
+
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    console.log(fruits.reverse());
+
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    console.log(fruits.sort());
 
 
 </script>
