@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+
+<h1 id="demo"></h1>
+
+<script>
+
+    "use strict";
+    (function() {
+        var tag = document.getElementById('demo');
+        tag.innerHTML = "Hyperion Rocks!"
+    })();
+</script>
+
+<p class="a">P1 A</p>
+<p class="b">P2 B</p>
+<p class="a">P3 A</p>
+<p class="b">P4 B</p>
+
+<script>
+    "use strict";
+    (function() {
+        // Get all elements with class 'even'
+        var evenElements = document.getElementsByClassName('b');
+        // Print all elements
+        for (var i = 0; i < evenElements.length; i++) {
+            console.log(evenElements[i].outerHTML);
+        }
+    })();
+</script>
+
+<p class="a">P1 A</p>
+<p class="b">P2 B</p>
+<p class="a">P3 A</p>
+
+<script>
+    "use strict";
+    (function() {
+    const pBs = document.getElementsByTagName("p");
+    for (let i = 0; i < pBs.length; i++) {
+        console.log(pBs[i].innerHTML);
+    }
+    })();
+
+</script>
+
+
+
+    <form name="fred">
+        <label for="username">Username: </label>
+    <input type="text" id="username">
+        </form>
+        <button onclick="saveUsername()">Save Username</button>
+    <script>
+    "use strict";
+    (function() {
+        var username = document.forms.fred.username.value;
+        console.log(username);
+    })();
+    function saveUsername() {
+        var username = document.forms.fred.username.value;
+        console.log(username);
+    }
+
+
+</script>
+<p id="hello">Fortuna Rocks!</p>
+<p id="demoText">Fortuna Rocks!</p>
+
+<script>
+(function () {
+var pHello = document.getElementById('hello');
+pHello.innerHTML = "<b>Hello Hyperion!</b>"
+var pDemo = document.getElementById('demoText');
+pDemo.innerText = "<b>Hello Hyperion!</b>"
+})();
+
+</script>
+</body>
+</html>
