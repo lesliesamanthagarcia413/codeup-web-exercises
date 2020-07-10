@@ -33,21 +33,53 @@
     let map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
+        zoom: 11,
         center: [-98.639601, 29.525549]
     });
 
-    var marker = new mapboxgl.Marker()
+    var spicyMarker = new mapboxgl.Marker()
         .setLngLat([-98.639601, 29.525549])
         .addTo(map);
 
-    var popup = new mapboxgl.Popup()
+    var spicyPopup = new mapboxgl.Popup()
         .setLngLat([-98.639601, 29.525549])
         .setHTML("<h3>Spicy Ginger</h3>")
         .addTo(map)
 
-    marker.setPopup(popup);
+    var huhotMarker = new mapboxgl.Marker()
+        .setLngLat([-98.591591, 29.561490])
+        .addTo(map);
 
+    var huhotPopup = new mapboxgl.Popup()
+        .setLngLat([-98.591591, 29.561490])
+        .setHTML("<h3>HuHot</h3>")
+        .addTo(map)
+
+    var costcoMarker = new mapboxgl.Marker()
+        .setLngLat([-98.597188, 29.576165])
+        .addTo(map);
+
+
+    var costcoPopup = new mapboxgl.Popup()
+        .setLngLat([-98.597188, 29.576165])
+        .setHTML("<h3>Costco</h3>")
+        .addTo(map)
+
+    spicyMarker.setPopup(spicyPopup);
+    huhotMarker.setPopup(huhotPopup);
+    costcoMarker.setPopup(costcoPopup);
+
+
+
+    var restaurants = [   {name: "Spicy Ginger", favoriteFood:"Pad Thai"}   {name: "HuHot", favoriteFood: "Noodles and spicy stuff"}  {name:"Costco", favoriteFood: "Pizza"}];
+
+    restaurants.forEach(function()) {
+        geocode(restaurant, key).then({ 
+    // Add Markers 
+    // Add Popups 
+     }) });
+
+    restaurants.forEach(function(restaurant) {     geocode(restaurant.address, mapboxKey).then(function (data) {         console.log(data);          let markUps = new mapboxgl.Marker().setLngLat(data).addTo(map);          let popUps = new mapboxgl.Popup()             .setHTML(restaurant.name)             .addTo(map)          markUps.setPopup(popUps);     }); });
 
 </script>
 </body>
